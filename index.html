@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu site - Demo do Copilot</title>
+  <title>Lanches populares do McDonald's</title>
   <style>
     body {
       margin: 0;
@@ -11,21 +11,34 @@
       display: grid;
       place-items: center;
       font-family: system-ui, "Segoe UI", Roboto, sans-serif;
-      background: #6e6e73;
+      background: #f3f3f3;
       padding: 1rem;
     }
     .cartao {
       background: #fff;
       border-radius: 20px;
       padding: 2.5rem;
-      max-width: 520px;
+      max-width: 620px;
       width: 100%;
       box-shadow: 0 20px 50px rgba(0, 0, 0, .25);
       text-align: center;
       color: #1d1d1f;
     }
     .emoji { font-size: 4rem; }
-    h1 { margin: .5rem 0; color: #6e6e73; }
+    h1 { margin: .5rem 0; color: #da291c; }
+    .lista-lanches {
+      margin: 1.5rem 0;
+      padding: 0;
+      list-style: none;
+      text-align: left;
+    }
+    .lista-lanches li {
+      padding: .8rem 1rem;
+      border-bottom: 1px solid #e5e5ea;
+    }
+    .lista-lanches li:last-child { border-bottom: 0; }
+    .lista-lanches strong { color: #1d1d1f; }
+    .lista-lanches span { color: #6e6e73; }
     .versao {
       margin-top: 1.5rem;
       padding: 1rem;
@@ -38,13 +51,13 @@
       border: 0;
       border-radius: 10px;
       padding: .8rem 1.1rem;
-      background: #1d1d1f;
+      background: #da291c;
       color: #fff;
       font: inherit;
       font-weight: 700;
       cursor: pointer;
     }
-    .botao:hover { background: #3a3a3c; }
+    .botao:hover { background: #b82017; }
     .status { min-height: 1.5rem; color: #6e6e73; }
     code { background: #e5e5ea; padding: 2px 6px; border-radius: 6px; }
     footer { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e5e5ea; color: #6e6e73; font-size: .85rem; }
@@ -52,9 +65,16 @@
 </head>
 <body>
   <main class="cartao">
-    <div class="emoji">🌱</div>
-    <h1>Demo do Copilot</h1>
-    <p>Uma pequena mudança feita ao vivo no Codespaces.</p>
+    <div class="emoji">🍔</div>
+    <h1>Lanches populares do McDonald's</h1>
+    <p>Clássicos conhecidos do cardápio. A disponibilidade pode variar conforme a região.</p>
+
+    <ul class="lista-lanches">
+      <li><strong>Big Mac</strong><br><span>Dois hambúrgueres, molho especial, alface, queijo, picles e cebola.</span></li>
+      <li><strong>Quarterão com Queijo</strong><br><span>Hambúrguer, queijo, cebola, picles, ketchup e mostarda.</span></li>
+      <li><strong>McChicken</strong><br><span>Frango empanado, alface e molho especial.</span></li>
+      <li><strong>Cheeseburger</strong><br><span>Hambúrguer, queijo, picles, cebola, ketchup e mostarda.</span></li>
+    </ul>
 
     <button class="botao" id="publicar" type="button">🚀 Simular nova publicação</button>
     <p class="status" id="status" aria-live="polite">Aguardando o primeiro teste...</p>
