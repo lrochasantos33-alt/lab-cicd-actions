@@ -1,3 +1,4 @@
+
 ## Versão Final — 16/11/2026 (fim de vida)
 - Motivo: fim da disciplina
 - Aviso: mensagem no próprio site
